@@ -1,6 +1,6 @@
-docker build -t ihorberda/multi-client:latest -t ihorberda/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t ihorberda/multi-server:latest -t ihorberda/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t ihorberda/multi-worker:latest -t ihorberda/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t ihorberda/multi-client:latest -t ihorberda/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t ihorberda/multi-server:latest -t ihorberda/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t ihorberda/multi-worker:latest -t ihorberda/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push ihorberda/multi-client:latest
 docker push ihorberda/multi-server:latest
 docker push ihorberda/multi-worker:latest
